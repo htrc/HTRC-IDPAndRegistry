@@ -229,7 +229,7 @@
         <repository>
             <id>nexus</id>
             <name>HTRC Nexus Repository</name>
-            <url>http://htrc.illinois.edu/nexus/content/groups/public/</url>
+            <url>http://nexus.htrc.illinois.edu/content/groups/public/</url>
         </repository>
     </repositories>
     <pluginRepositories>
@@ -244,7 +244,7 @@
         <pluginRepository>
             <id>nexus</id>
             <name>HTRC Nexus Repository</name>
-            <url>http://htrc.illinois.edu/nexus/content/groups/public/</url>
+            <url>http://nexus.htrc.illinois.edu/content/groups/public/</url>
         </pluginRepository>
     </pluginRepositories>
 </project>
