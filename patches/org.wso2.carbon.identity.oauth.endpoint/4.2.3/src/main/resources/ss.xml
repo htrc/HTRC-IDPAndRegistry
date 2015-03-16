@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<saml2:Assertion xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion" ID="gnnlagidjehbnhmbkjfgefdlhkmklpcfbiccgbmf"
+                 IssueInstant="2015-03-02T16:59:47.965Z" Version="2.0">
+    <saml2:Issuer Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity">localhost</saml2:Issuer>
+    <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+            <ds:Reference URI="#gnnlagidjehbnhmbkjfgefdlhkmklpcfbiccgbmf">
+                <ds:Transforms>
+                    <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                    <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                </ds:Transforms>
+                <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                <ds:DigestValue>c5VLgNXFfYmZXI4L9+BYtL04N90=</ds:DigestValue>
+            </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue>
+            pXMH/z4hrgFBq4jMkUu7yhzKIQtGioFfYakuacWDT82m5Ow7NYKRdmg2LW78II+uIH5xsqAfX3xidH2JoK3UlfJ4W738pBXAJwfsbAurTADA3UtwSXjHx0mv37lejJbeDSriI1lYupTQWsA45gI85RBNi2upHBQEjLfjLALc8M1ZLF5qgccR7xSClpiV1PybgjDgVAmguCTPRAFQiB1sYdDtmlcrxuGkxpb+m42K4UvO344M3cw1LHPmHDMbWzI993j0u5tqSTXzyzawbcYOFhaASEnPDLW4cz11IRuXt8qnFm4/OZ/iikPtutMkeGCu63YJShNDKmLvHL0A7njAtw==
+        </ds:SignatureValue>
+        <ds:KeyInfo>
+            <ds:X509Data>
+                <ds:X509Certificate>
+                    MIIFKzCCBBOgAwIBAgIRAPPRdrKr5VmbxINN8C1HJ/cwDQYJKoZIhvcNAQEFBQAwUTELMAkGA1UEBhMCVVMxEjAQBgNVBAoTCUludGVybmV0MjERMA8GA1UECxMISW5Db21tb24xGzAZBgNVBAMTEkluQ29tbW9uIFNlcnZlciBDQTAeFw0xMjA0MjUwMDAwMDBaFw0xNTA0MjUyMzU5NTlaMIGUMQswCQYDVQQGEwJVUzELMAkGA1UECBMCSU4xFDASBgNVBAcTC0Jsb29taW5ndG9uMRswGQYDVQQKExJJbmRpYW5hIFVuaXZlcnNpdHkxHzAdBgNVBAsTFkRhdGEgdG8gSW5zaWdodCBDZW50ZXIxJDAiBgNVBAMTG3NpbHZlcm1hcGxlLnB0aS5pbmRpYW5hLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANKPkkmHSQwUPTB8I8wkIUsZg9ypeUrarRklKVA7skY7khzX2W6ewOFyYJIkLqpMjxhMbdwdpJdZBCUhUXb/iGt/TveQvzQN5TUEtM2YVNMHqRldRuCc3Tgu9zXGDIeoXlhFUq4biNyc1HE2ZSHgjNNOn95b3WoQnPqmk5+M1rzzVWimLkPlba0rSl3cQpvj6+qd5Ft8wZqKY5wVjGv34ToQuxJU8vHtiMnQON3LABA1jvfxDYDGrSJUNLpobJvkca3yp22m56+YRZW0kIOXqeogXOvwTN+XlcZmvgCUQgcRtEQfMe2+j6py3/BRoInTtqxKUixjx25EA1adzkzW/XkCAwEAAaOCAbgwggG0MB8GA1UdIwQYMBaAFEhPWvovSppe4FDza3tVpd71vjRdMB0GA1UdDgQWBBR+gzIMVLG88GUiXgnY1xTl74qyDjAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwXQYDVR0gBFYwVDBSBgwrBgEEAa4jAQQDAQEwQjBABggrBgEFBQcCARY0aHR0cHM6Ly93d3cuaW5jb21tb24ub3JnL2NlcnQvcmVwb3NpdG9yeS9jcHNfc3NsLnBkZjA9BgNVHR8ENjA0MDKgMKAuhixodHRwOi8vY3JsLmluY29tbW9uLm9yZy9JbkNvbW1vblNlcnZlckNBLmNybDBvBggrBgEFBQcBAQRjMGEwOQYIKwYBBQUHMAKGLWh0dHA6Ly9jZXJ0LmluY29tbW9uLm9yZy9JbkNvbW1vblNlcnZlckNBLmNydDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuaW5jb21tb24ub3JnMCYGA1UdEQQfMB2CG3NpbHZlcm1hcGxlLnB0aS5pbmRpYW5hLmVkdTANBgkqhkiG9w0BAQUFAAOCAQEAXe+qg15PeL6FSeq1MxeC/G3FbQGm/4ndIBnNNfbq6etKxqbsASYK5u1YXdzdXlEwLTAuLd9spftdM2WlqabixI7N85kjRDFwl2qBlHIGW7MVRERtI0R7OGccXCMx/UBlCge2JphEKlTBmEYZR5XvVUYk2AbIUkP0KBO5diTYmoS1eg75AHY8B1itoAIvDtA5rsIU9VPB8Ds+0kIDCMVLgnoqCp/F0GsMzXV6QZx0RKMpeD6QRc8OEOCiTe5rPtjB4jco/T+2G1kSoyQPa8LRvsitKKg3ZaC6hJnlkpobGUyZdqhqslfxidk4dbsizJ3Bt70XChyepDRahTGHCQeqlA==
+                </ds:X509Certificate>
+            </ds:X509Data>
+        </ds:KeyInfo>
+    </ds:Signature>
+    <saml2:Subject>
+        <saml2:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">samitha123</saml2:NameID>
+        <saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+            <saml2:SubjectConfirmationData InResponseTo="_707a637d9e9cb445549f55ee68b60e52"
+                                           NotOnOrAfter="2015-03-02T17:04:47.965Z"
+                                           Recipient="https://htrc2.pti.indiana.edu/callback?client_name=Saml2Client"/>
+        </saml2:SubjectConfirmation>
+        <saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+            <saml2:SubjectConfirmationData InResponseTo="_707a637d9e9cb445549f55ee68b60e52"
+                                           NotOnOrAfter="2015-03-02T17:04:47.965Z"
+                                           Recipient="https://silvermaple.pti.indiana.edu/oauth2/token"/>
+        </saml2:SubjectConfirmation>
+        <saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+            <saml2:SubjectConfirmationData InResponseTo="_707a637d9e9cb445549f55ee68b60e52"
+                                           NotOnOrAfter="2015-03-02T17:04:47.965Z"
+                                           Recipient="https://silvermaple.pti.indiana.edu:9443/oauth2/token"/>
+        </saml2:SubjectConfirmation>
+    </saml2:Subject>
+    <saml2:Conditions NotBefore="2015-03-02T16:59:47.965Z" NotOnOrAfter="2015-03-02T17:04:47.965Z">
+        <saml2:AudienceRestriction>
+            <saml2:Audience>https://htrc2.pti.indiana.edu/callback?client_name=Saml2Client</saml2:Audience>
+            <saml2:Audience>https://silvermaple.pti.indiana.edu/oauth2/token</saml2:Audience>
+            <saml2:Audience>https://silvermaple.pti.indiana.edu:9443/oauth2/token</saml2:Audience>
+            <saml2:Audience>https://silvermaple.pti.indiana.edu:443/oauth2/token</saml2:Audience>
+        </saml2:AudienceRestriction>
+    </saml2:Conditions>
+    <saml2:AuthnStatement AuthnInstant="2015-03-02T16:59:47.966Z" SessionIndex="1bc5e52a-d177-4e9f-8f3e-2f26c11f94f0">
+        <saml2:AuthnContext>
+            <saml2:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</saml2:AuthnContextClassRef>
+        </saml2:AuthnContext>
+    </saml2:AuthnStatement>
+</saml2:Assertion>
