@@ -162,7 +162,7 @@
                                     <goal>download-single</goal>
                                 </goals>
                                 <configuration>
-                                    <url>https://htrc2.pti.indiana.edu</url>
+                                    <url>https://sharc.hathitrust.org</url>
                                     <fromFile>files/wso2is-5.0.0.zip</fromFile>
                                     <toDir>${project.build.directory}/</toDir>
                                 </configuration>
