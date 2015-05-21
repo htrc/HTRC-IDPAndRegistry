@@ -1,9 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>edu.indiana.d2i.htrc</groupId>
+
+    <parent>
+        <groupId>edu.indiana.d2i.htrc</groupId>
+        <artifactId>htrc-idpandregistry-parent</artifactId>
+        <version>1.1.0-SNAPSHOT</version>
+    </parent>
     <artifactId>htrc-idpandregistry</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Custom WSO2 IS distribution with GREG features for HTRC</name>
     <profiles>
