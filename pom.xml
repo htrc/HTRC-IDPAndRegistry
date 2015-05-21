@@ -9,8 +9,8 @@
     
     <modules>
         <module>useradmin-ext</module>
-        <module>patches/org.wso2.carbon.identity.core</module>
-        <module>patches/org.wso2.carbon.identity.oauth.endpoint</module>
+        <module>patches/org.wso2.carbon.identity.core/4.2.3</module>
+        <module>patches/org.wso2.carbon.identity.oauth.endpoint/4.2.3</module>
         <module>distribution</module>
     </modules>    
 
