@@ -16,8 +16,8 @@ WORKDIR /opt
 ADD htrc-idpandregistry-1.1.0-SNAPSHOT.zip /opt/
 RUN unzip htrc-idpandregistry-1.1.0-SNAPSHOT.zip
 
-RUN mkdir /etc/service/wso2is
-ADD wso2is.sh /etc/service/wso2is/run
+RUN mkdir -p /etc/my_init.d
+ADD wso2is.sh /etc/my_init.d/wso2is.sh
 
 
 
