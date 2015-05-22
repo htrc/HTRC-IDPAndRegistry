@@ -16,7 +16,7 @@ ADD htrc-idpandregistry-1.1.0-SNAPSHOT.zip /opt/
 RUN unzip htrc-idpandregistry-1.1.0-SNAPSHOT.zip
 
 # this is required because current maven build change file permission during wso2is repackaging.
-RUN chmod +x /opt/htrc-idpandregistry-1.1.0-SNAPSHOT/*.sh
+RUN chmod +x /opt/htrc-idpandregistry-1.1.0-SNAPSHOT/bin/*.sh
 
 RUN mkdir -p /etc/my_init.d
 ADD wso2is.sh /etc/my_init.d/wso2is.sh
