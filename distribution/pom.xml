@@ -32,9 +32,9 @@
                                 <configuration>
                                     <artifactItems>
                                         <artifactItem>
-                                            <groupId>edu.indiana.d2i.htrc.security</groupId>
+                                            <groupId>edu.indiana.d2i.htrc</groupId>
                                             <artifactId>useradmin-ext</artifactId>
-                                            <version>1.0.0-SNAPSHOT</version>
+                                            <version>${project.version}</version>
                                             <type>jar</type>
                                             <overWrite>true</overWrite>
                                             <outputDirectory>
