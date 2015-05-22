@@ -26,6 +26,7 @@ RUN chmod +x /etc/my_init.d/wso2is.sh
 #RUN mkdir /etc/service/wso2is
 #ADD wso2is.sh /etc/service/wso2is/run
 
+EXPOSE 9443
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
