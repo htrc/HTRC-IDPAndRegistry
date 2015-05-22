@@ -22,10 +22,10 @@ RUN mkdir -p /etc/my_init.d
 ADD wso2is.sh /etc/my_init.d/wso2is.sh
 RUN chmod +x /etc/my_init.d/wso2is.sh
 
+# TODO: Make htrc-idpandregistry run as a daemon.
 #RUN mkdir /etc/service/wso2is
 #ADD wso2is.sh /etc/service/wso2is/run
 
-#RUN file /etc/service/wso2is/run
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
