@@ -6,7 +6,8 @@ CMD ["/sbin/my_init"]
 
 WORKDIR /opt
 
-ADD $htrc-idp-dist /opt
+ADD htrc-idpandregistry-1.1.0-SNAPSHOT.zip /opt
+RUN unzip htrc-idpandregistry-1.1.0-SNAPSHOT.zip
 
 
 

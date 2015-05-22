@@ -139,28 +139,6 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>com.google.code.maven-replacer-plugin</groupId>
-                <artifactId>replacer</artifactId>
-                <version>1.5.3</version>
-                <executions>
-                    <execution>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>replace</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <file>${project.build.directory}/docker/Dockerfile</file>
-                    <replacements>
-                        <replacement>
-                            <token>$htrc-idp-dist</token>
-                            <value>${project.build.finalName}.zip</value>
-                        </replacement>
-                    </replacements>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>wagon-maven-plugin</artifactId>
                 <version>1.0-beta-3</version>
