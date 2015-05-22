@@ -1,9 +1,6 @@
 # Base image
 FROM htrc/oracle-java7
 
-# Use baseimage-docker's init system.
-CMD ["/sbin/my_init"]
-
 RUN useradd -ms /bin/bash wso2is
 
 RUN apt-get update
@@ -20,6 +17,9 @@ RUN unzip htrc-idpandregistry-1.1.0-SNAPSHOT.zip
 
 RUN mkdir -p /etc/my_init.d
 ADD wso2is.sh /etc/my_init.d/wso2is.sh
+
+# Use baseimage-docker's init system.
+CMD ["/sbin/my_init"]
 
 
 
