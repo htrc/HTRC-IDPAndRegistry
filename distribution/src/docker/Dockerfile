@@ -21,6 +21,8 @@ RUN unzip htrc-idpandregistry-1.1.0-SNAPSHOT.zip
 RUN mkdir /etc/service/wso2is
 ADD wso2is.sh /etc/service/wso2is/run
 
+RUN file /etc/service/wso2is/run
+
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
