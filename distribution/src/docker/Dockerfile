@@ -6,6 +6,8 @@ CMD ["/sbin/my_init"]
 
 RUN useradd -ms /bin/bash wso2is
 
+RUN apt-get update
+
 RUN apt-get install -y unzip
 
 # Clean up APT when done.
