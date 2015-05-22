@@ -129,12 +129,33 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <file>${project.build.directory}/wso2is-5.0.0/repository/components/default/configuration/org.eclipse.equinox.simpleconfigurator/bundles.info
-                            </file>
+                    <file>${project.build.directory}/wso2is-5.0.0/repository/components/default/configuration/org.eclipse.equinox.simpleconfigurator/bundles.info</file>
                     <replacements>
                         <replacement>
                             <token>false</token>
                             <value>true</value>
+                        </replacement>
+                    </replacements>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.google.code.maven-replacer-plugin</groupId>
+                <artifactId>replacer</artifactId>
+                <version>1.5.3</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>replace</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <file>${project.build.directory}/docker/Dockerfile</file>
+                    <replacements>
+                        <replacement>
+                            <token>$htrc-idp-dist</token>
+                            <value>${project.build.finalName}.zip</value>
                         </replacement>
                     </replacements>
                 </configuration>
@@ -202,6 +223,14 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.2.8</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <imageName>htrc/idpandregistry</imageName>
                     <dockerDirectory>src/docker</dockerDirectory>
