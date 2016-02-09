@@ -15,7 +15,7 @@ RUN unzip $IDP_ARCHIVE
 RUN chmod +x $IDP_ROOT/bin/*.sh
 
 RUN mkdir -p /usr/local/bin
-ADD wso2is.sh /usr/local/bin
+ADD wso2is.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/wso2is.sh
 
 EXPOSE 9443
