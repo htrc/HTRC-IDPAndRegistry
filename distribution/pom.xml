@@ -32,6 +32,25 @@
                                     <outputDirectory>${basedir}/target/wso2is-5.0.0/repository/components/dropins
                                             </outputDirectory>
                                 </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.wso2.carbon</groupId>
+                                    <artifactId>org.wso2.carbon.identity.core</artifactId>
+                                    <version>4.2.3</version>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${basedir}/target/wso2is-5.0.0/repository/components/patches/patch9999
+                                            </outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.wso2.carbon</groupId>
+                                    <artifactId>org.wso2.carbon.identity.oauth.endpoint</artifactId>
+                                    <version>4.2.3</version>
+                                    <type>war</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${basedir}/target/wso2is-5.0.0/repository/deployment/server/webapps
+                                            </outputDirectory>
+                                    <destFileName>oauth2.war</destFileName>
+                                </artifactItem>
                             </artifactItems>
                             <!-- other configurations here -->
                         </configuration>
