@@ -70,15 +70,16 @@
                                 <artifactItem>
                                     <groupId>org.wso2.carbon</groupId>
                                     <artifactId>org.wso2.carbon.identity.core</artifactId>
-                                    <version>4.2.3</version>
+                                    <version>4.2.3-${project.version}</version>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${project.build.directory}/wso2is-${wso2is.version}/repository/components/patches/patch9999</outputDirectory>
+                                    <destFileName>org.wso2.carbon.identity.core-4.2.3.jar</destFileName>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.wso2.carbon</groupId>
                                     <artifactId>org.wso2.carbon.identity.oauth.endpoint</artifactId>
-                                    <version>4.2.3</version>
+                                    <version>4.2.3-${project.version}</version>
                                     <type>war</type>
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${project.build.directory}/wso2is-${wso2is.version}/repository/deployment/server/webapps</outputDirectory>
