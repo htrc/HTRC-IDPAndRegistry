@@ -3,7 +3,7 @@
     <parent>
         <groupId>edu.indiana.d2i.htrc</groupId>
         <artifactId>htrc-idpandregistry-parent</artifactId>
-        <version>1.1.0-SNAPSHOT</version>
+        <version>1.1.1-SNAPSHOT</version>
     </parent>
     <artifactId>htrc-idpandregistry</artifactId>
     <packaging>pom</packaging>
