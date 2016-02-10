@@ -53,7 +53,6 @@
                     <pushFeatures>true</pushFeatures>
                     <pushReleases>true</pushReleases>
                     <pushHotfixes>true</pushHotfixes>
-                    <squash>true</squash>
                     <flowInitContext>
                         <versionTagPrefix>v</versionTagPrefix>
                     </flowInitContext>
