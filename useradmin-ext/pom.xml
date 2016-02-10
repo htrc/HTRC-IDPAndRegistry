@@ -1,14 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <groupId>edu.indiana.d2i.htrc</groupId>
         <artifactId>htrc-idpandregistry-parent</artifactId>
-        <version>1.1.0-SNAPSHOT</version>
+        <version>1.1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>useradmin-ext</artifactId>
     <packaging>bundle</packaging>
-    <name>User Admin Extensions</name>
 
     <dependencies>
         <dependency>
@@ -16,36 +14,43 @@
             <artifactId>org.wso2.carbon.user.core</artifactId>
             <version>${wso2.carbon.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.user.mgt</artifactId>
             <version>${wso2.carbon.minor.version.421}</version>
         </dependency>
+
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.user.mgt.common</artifactId>
             <version>${wso2.carbon.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.utils</artifactId>
             <version>${wso2.carbon.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.core</artifactId>
             <version>${wso2.carbon.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.registry.core</artifactId>
             <version>${wso2.carbon.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.identity.oauth.common</artifactId>
             <version>${wso2.carbon.minor.version.422}</version>
         </dependency>
+
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.identity.oauth</artifactId>
@@ -59,41 +64,26 @@
         </dependency>
     </dependencies>
 
-        <repositories>
-        <repository>
-            <id>wso2-nexus</id>
-            <name>WSO2 internal Repository</name>
-            <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-                <checksumPolicy>fail</checksumPolicy>
-            </releases>
-        </repository>
-    </repositories>
-
-
     <properties>
-    	<wso2.carbon.version>4.2.0</wso2.carbon.version>
-    	<wso2.carbon.minor.version.421>4.2.1</wso2.carbon.minor.version.421>
-    	<wso2.carbon.minor.version.422>4.2.2</wso2.carbon.minor.version.422>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <public.svn.root>svn://svn.code.sf.net/p/htrc/code</public.svn.root>
-        <developer.svn.root>svn+ssh://svn.code.sf.net/p/htrc/code</developer.svn.root>
-        <fisheye.svn.root>http://fisheye.htrc.illinois.edu/changelog</fisheye.svn.root>
+        <wso2.carbon.version>4.2.0</wso2.carbon.version>
+        <wso2.carbon.minor.version.421>4.2.1</wso2.carbon.minor.version.421>
+        <wso2.carbon.minor.version.422>4.2.2</wso2.carbon.minor.version.422>
+        <maven.deploy.skip>false</maven.deploy.skip>
+        <maven.install.skip>false</maven.install.skip>
     </properties>
 
     <build>
         <plugins>
-        <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.0</version>
+                <version>3.2</version>
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
@@ -102,7 +92,7 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Private-Package></Private-Package>
+                        <Private-Package />
                         <Export-Package>
                             edu.indiana.d2i.htrc.wso2is.extensions.*
                         </Export-Package>
@@ -120,9 +110,15 @@
                             *;resolution:=optional
                         </Import-Package>
                         <DynamicImport-Package>*</DynamicImport-Package>
+                        <Git-Sha>${git.commit.id}</Git-Sha>
+                        <Git-Branch>${git.branch}</Git-Branch>
+                        <Git-Version>${git.commit.id.describe}</Git-Version>
+                        <Git-Dirty>${git.dirty}</Git-Dirty>
+                        <Build-Date>${git.build.time}</Build-Date>
                     </instructions>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-scr-plugin</artifactId>
@@ -130,4 +126,8 @@
             </plugin>
         </plugins>
     </build>
+
+    <!-- Project Information -->
+    <name>User Admin Extensions</name>
+    <description>WSO2 IDP extensions for user administration</description>
 </project>
