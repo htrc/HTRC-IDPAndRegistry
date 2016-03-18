@@ -1,5 +1,5 @@
 # Base image
-FROM htrc/oracle-java7
+FROM htrc/oracle-java7:alpine
 
 WORKDIR /opt
 
