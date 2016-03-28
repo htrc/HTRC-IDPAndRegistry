@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # If IDP configuration is available through a Docker volume, remove the default configuration
 # and replace it with the configuration supplied by the volume.

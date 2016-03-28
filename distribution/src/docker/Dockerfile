@@ -1,5 +1,5 @@
 # Base image
-FROM htrc/oracle-java7:alpine
+FROM registry.docker.htrc.indiana.edu/htrc/oracle-java7:alpine
 
 WORKDIR /opt
 
