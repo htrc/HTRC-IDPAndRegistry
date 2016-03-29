@@ -129,6 +129,7 @@
 							*;resolution:=optional
                         </Import-Package>
 						<DynamicImport-Package>*</DynamicImport-Package>
+						<Bundle-Version>4.2.3</Bundle-Version>
 					</instructions>
 				</configuration>
 			</plugin>
