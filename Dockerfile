@@ -1,5 +1,5 @@
 # Base image
-FROM htrc/java7:alpine
+FROM anapsix/alpine-java:jdk7
 
 MAINTAINER Data to Insight Center <d2i@indiana.edu>
 
@@ -8,5 +8,4 @@ WORKDIR /opt/wso2is/
 
 EXPOSE 9443
 
-# Use baseimage-docker's init system.
-CMD ["dumb-init", "./bin/wso2server.sh"]
+CMD ["/opt/wso2is/bin/wso2server.sh"]
