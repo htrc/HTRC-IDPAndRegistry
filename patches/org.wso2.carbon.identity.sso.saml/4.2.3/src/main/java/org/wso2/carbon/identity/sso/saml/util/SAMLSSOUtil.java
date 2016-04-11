@@ -403,7 +403,7 @@ public class SAMLSSOUtil {
             identityProvider = IdentityProviderManager.getInstance().getResidentIdP(tenantDomain);
         } catch (IdentityApplicationManagementException e) {
             throw new IdentityException(
-                    "Error occurred while retrieving Resident Identity Provider information for tenant " + tenantDomain);
+                    "Error occurred while retrieving Resident Identity Provider information for tenant " + tenantDomain, e);
         }
         FederatedAuthenticatorConfig[] authnConfigs = identityProvider.getFederatedAuthenticatorConfigs();
         for(FederatedAuthenticatorConfig config : authnConfigs){
