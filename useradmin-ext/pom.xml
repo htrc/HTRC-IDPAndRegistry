@@ -2,7 +2,11 @@
     <parent>
         <groupId>edu.indiana.d2i.htrc</groupId>
         <artifactId>htrc-idpandregistry-parent</artifactId>
+<<<<<<< HEAD
         <version>1.1.0</version>
+=======
+        <version>1.1.1</version>
+>>>>>>> release/1.1.1
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>useradmin-ext</artifactId>
@@ -68,8 +72,11 @@
         <wso2.carbon.version>4.2.0</wso2.carbon.version>
         <wso2.carbon.minor.version.421>4.2.1</wso2.carbon.minor.version.421>
         <wso2.carbon.minor.version.422>4.2.2</wso2.carbon.minor.version.422>
+<<<<<<< HEAD
         <maven.deploy.skip>false</maven.deploy.skip>
         <maven.install.skip>false</maven.install.skip>
+=======
+>>>>>>> release/1.1.1
     </properties>
 
     <build>
@@ -87,7 +94,7 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <version>2.3.5</version>
+                <version>3.0.1</version>
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>

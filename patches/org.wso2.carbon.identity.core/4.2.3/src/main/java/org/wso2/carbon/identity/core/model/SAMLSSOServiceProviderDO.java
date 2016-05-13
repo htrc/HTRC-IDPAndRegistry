@@ -26,6 +26,7 @@ public class SAMLSSOServiceProviderDO implements Serializable {
     private static final long serialVersionUID = -1213957008659821807L;
     
     private String issuer;
+	String tenantDomain;
 	private String assertionConsumerUrl;
 	private String certAlias;
 	private String logoutURL;
@@ -247,6 +248,14 @@ public class SAMLSSOServiceProviderDO implements Serializable {
         this.requestedRecipientsList = requestedRecipients;
         this.requestedRecipients = requestedRecipients.toArray(new String[requestedRecipientsList.size()]);
     }
+
+	public void setTenantDomain(String tenantDomain) {
+		this.tenantDomain = tenantDomain;
+	}
+
+	public String getTenantDomain() {
+		return tenantDomain;
+	}
 
 	/**
 	 * @return the doSignResponse

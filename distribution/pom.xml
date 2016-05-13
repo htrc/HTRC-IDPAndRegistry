@@ -3,7 +3,7 @@
     <parent>
         <groupId>edu.indiana.d2i.htrc</groupId>
         <artifactId>htrc-idpandregistry-parent</artifactId>
-        <version>1.1.0</version>
+        <version>1.1.1-SNAPSHOT</version>
     </parent>
     <artifactId>htrc-idpandregistry</artifactId>
     <packaging>pom</packaging>
@@ -11,7 +11,7 @@
 
     <properties>
         <wso2is.version>5.0.0</wso2is.version>
-        <regext.version>1.2.3</regext.version>
+        <regext.version>1.4.0</regext.version>
     </properties>
 
     <build>
@@ -50,7 +50,7 @@
                                 <artifactItem>
                                     <groupId>edu.indiana.d2i.htrc</groupId>
                                     <artifactId>useradmin-ext</artifactId>
-                                    <version>${project.version}</version>
+                                    <version>${project.parent.version}</version>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${project.build.directory}/wso2is-${wso2is.version}/repository/components/dropins</outputDirectory>
@@ -70,15 +70,25 @@
                                 <artifactItem>
                                     <groupId>org.wso2.carbon</groupId>
                                     <artifactId>org.wso2.carbon.identity.core</artifactId>
-                                    <version>4.2.3</version>
+                                    <version>4.2.3-${project.parent.version}</version>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${project.build.directory}/wso2is-${wso2is.version}/repository/components/patches/patch9999</outputDirectory>
+                                    <destFileName>org.wso2.carbon.identity.core-4.2.3.jar</destFileName>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.wso2.carbon</groupId>
+                                    <artifactId>org.wso2.carbon.identity.sso.saml</artifactId>
+                                    <version>4.2.3-${project.parent.version}</version>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${project.build.directory}/wso2is-${wso2is.version}/repository/components/patches/patch9999</outputDirectory>
+                                    <destFileName>org.wso2.carbon.identity.sso.saml-4.2.3.jar</destFileName>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.wso2.carbon</groupId>
                                     <artifactId>org.wso2.carbon.identity.oauth.endpoint</artifactId>
-                                    <version>4.2.3</version>
+                                    <version>4.2.3-${project.parent.version}</version>
                                     <type>war</type>
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${project.build.directory}/wso2is-${wso2is.version}/repository/deployment/server/webapps</outputDirectory>
@@ -187,7 +197,26 @@
                         </replacement>
                     </replacements>
                 </configuration>
-            </plugin>
+	</plugin>
+
+<plugin>
+        <groupId>com.coderplus.maven.plugins</groupId>
+        <artifactId>copy-rename-maven-plugin</artifactId>
+        <version>1.0</version>
+        <executions>
+          <execution>
+            <id>rename-file</id>
+            <phase>package</phase>
+            <goals>
+              <goal>rename</goal>
+            </goals>
+            <configuration>
+              <sourceFile>${project.build.directory}/wso2is-${wso2is.version}/</sourceFile>
+              <destinationFile>${project.build.directory}/wso2is/</destinationFile>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -206,29 +235,6 @@
                         <goals>
                             <goal>single</goal>
                         </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.7</version>
-                <executions>
-                    <execution>
-                        <id>create-dockerfile</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/docker</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/docker</directory>
-                                    <filtering>true</filtering>
-                                </resource>
-                            </resources>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>

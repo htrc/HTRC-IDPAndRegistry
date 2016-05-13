@@ -144,8 +144,6 @@ public class SAMLSSOServiceProviderDAO extends AbstractDAO<SAMLSSOServiceProvide
                     + encodePath(serviceProviderDO.getIssuer());
         }
 
-        log.info("SAML SSO SP Path: " + path);
-
         boolean isTransactionStarted = Transaction.isStarted();
         try {
             if (registry.resourceExists(path)) {
