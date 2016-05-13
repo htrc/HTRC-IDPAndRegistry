@@ -68,11 +68,8 @@
         <wso2.carbon.version>4.2.0</wso2.carbon.version>
         <wso2.carbon.minor.version.421>4.2.1</wso2.carbon.minor.version.421>
         <wso2.carbon.minor.version.422>4.2.2</wso2.carbon.minor.version.422>
-<<<<<<< HEAD
         <maven.deploy.skip>false</maven.deploy.skip>
         <maven.install.skip>false</maven.install.skip>
-=======
->>>>>>> release/1.1.1
     </properties>
 
     <build>
