@@ -27,7 +27,11 @@
 	<name>WSO2 Carbon - Identity Core</name>
 	<description>A custom wso2 products or solution</description>
 	<url>http://www.wso2.com</url>
-	<version>4.2.3-1.1.1-SNAPSHOT</version>
+<<<<<<< HEAD
+	<version>4.2.3</version>
+=======
+	<version>4.2.3-1.1.1</version>
+>>>>>>> release/1.1.1
 	<properties>
 		<maven.install.skip>true</maven.install.skip>
 		<maven.deploy.skip>true</maven.deploy.skip>
