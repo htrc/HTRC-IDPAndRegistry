@@ -7,7 +7,7 @@
   </formats>
   <fileSets>
     <fileSet>
-      <directory>${project.build.directory}/wso2is-${wso2is.version}</directory>
+      <directory>${project.build.directory}/wso2is</directory>
       <outputDirectory>/</outputDirectory>
     </fileSet>
   </fileSets>
