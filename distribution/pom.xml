@@ -11,7 +11,7 @@
 
     <properties>
         <wso2is.version>5.0.0</wso2is.version>
-        <regext.version>1.4.0</regext.version>
+        <regext.version>1.3.0</regext.version>
     </properties>
 
     <build>
